@@ -1,0 +1,109 @@
+.main{
+    padding: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.logo{
+    
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.inputPos{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 28px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 488px;
+}
+
+.searchInput{
+    width: 100%;
+    outline: none;
+    text-align: center;
+    background-color: #FFFCE0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 18px;
+    border: 1px solid #D2D1C3;
+    border-radius: 5px;
+    
+}
+
+.searchInput::placeholder{
+    color: #D2D1C3;
+    text-align: center;
+}
+
+.searchInput:focus::-webkit-input-placeholder{
+    color: transparent;
+}   
+
+@media all and (max-width:400px) {
+    .searchBtn{
+        display: block;
+        text-decoration: none;
+        background-color: #FFA000;
+        color: #fff;
+      
+        font-size: 14px;
+        right: 2px;
+        padding: 11px 10px;
+        margin-top: 2px;
+        border-radius: 4px;
+    }
+}
+
+@media all and (min-width:401px) {
+    .searchBtn{
+        text-decoration: none;
+        background-color: #FFA000;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 14px;
+        padding: 11px 10px;
+        margin-top: 2px;
+        border-radius: 4px;
+    }
+}
+
+
+.resetBtn{
+
+    position: absolute;
+    top: 8px;
+    left: 22px;
+}
+
+/* .searchBtn{
+    text-decoration: none;
+    background-color: #FFA000;
+    color: #fff;
+    position: absolute;
+    font-size: 14px;
+    right: 2px;
+    padding: 11px 10px;
+    margin-top: 2px;
+    border-radius: 4px;
+} */
+
+.result{
+    color: #C2B1AF;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer{
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.deylEnergyLink{
+    color: #FFA000;
+}
+
