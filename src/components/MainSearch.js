@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Logo from '../img/Logo.png';
 import '../css/MainSearch.css';
-import { NavLink } from 'react-router-dom';
 import SearchList from './SearchList';
 import Axios from 'axios';
 import reset from '../img/reset.png'
@@ -11,6 +10,7 @@ function MainSearch(){
     const [inputValue, setInputValue] = useState("");
     const [loading, setLoading] = useState(false);
 
+    // input에서 set이 된 inputValue값으로 데이터를 가져옴
     const onSearch = ()=>{
         setLoading(true);
        Axios.get("https://www.googleapis.com/books/v1/volumes?q="+inputValue).then((response)=>{
@@ -20,10 +20,12 @@ function MainSearch(){
         
     }
 
+    // input에 입력한 값을 setInput에 set함
     const onChange = (e)=>{
         setInputValue(e.target.value);
     }
 
+    // input에 모든 문자를 지움
     const onReset = () =>{
         setInputValue("");
         setBookData([]);
@@ -32,17 +34,17 @@ function MainSearch(){
     return(
         <div className="main">
             <div>
-                <img className='logo' src={Logo}/>
+                <img className='logo' src={Logo} alt="img"/>
             </div>
             <div className="inputPos">
-                <a href="#" onClick={onReset} style={{display: inputValue === '' ? 'none' : 'block'}}><img className="resetBtn" src={reset} alt=""/></a>
+                <a href="#title" onClick={onReset} style={{display: inputValue === '' ? 'none' : 'block'}}><img className="resetBtn" src={reset} alt="img"/></a>
                 <input 
                 placeholder='Type author, book name, subject...' 
                 className='searchInput'
                 onChange={onChange}
                 value={inputValue}
                 />
-                <a href="#" className="searchBtn" onClick={onSearch}>SEARCH</a>
+                <a href="#title" className="searchBtn" onClick={onSearch}>SEARCH</a>
             </div>
             { loading && <div>loading...</div> }
             { !loading && <div className="result">{bookData.length === 0 ?'Nothing to show...' : <SearchList data={bookData} />}</div> }
