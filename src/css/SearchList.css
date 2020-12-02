@@ -4,20 +4,12 @@
 }
 
 .searchList ul{
-  
     justify-content: space-between;
     text-align: left;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
-/* .listFlex{
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-
 
 @media all and (min-width:900px) {
     .listFlex{
@@ -37,7 +29,6 @@
 }
 
 @media all and (max-width:899px) {
-
     .listItem{
         padding: 20px 10px 5px 10px;
         background-color: #FFFDED;
@@ -48,8 +39,6 @@
         box-sizing: border-box;
     }
 }
-
-
 
 .bookTitle{
     text-decoration: none;
